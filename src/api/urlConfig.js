@@ -44,3 +44,6 @@ export const emotionList = cloudRoot + '/baby/api/wx/qspy';
 export const resultList = serverRoot + "/gw/search/byName";
 // 品牌咨询
 export const brandNewsList = serverRoot + '/gw/resource/recommend';
+
+//首页轮播图
+export const indexBanner = serverRoot + "/gw/resource/recommend"

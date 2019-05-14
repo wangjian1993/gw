@@ -189,5 +189,10 @@ export const homeApi = {
     return axios.post(url.brandNewsList, qs.stringify(param)).then((res) => {
       return res.data;
     })
-  }
+  },
+   getBanner(param) {
+     return axios.post(url.indexBanner, qs.stringify(param)).then((res) => {
+       return res.data;
+     })
+   }
 }

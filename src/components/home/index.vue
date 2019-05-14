@@ -5,20 +5,19 @@
     </div> -->
     <!-- swiper -->
     <swiper class="bg-white" :options="homeBannerSwiper">
-        <swiper-slide v-for="(item, index) in homeBannerList" :key="index">
+        <swiper-slide v-for="(item, index) in bannerData" :key="index">
             <div v-if="item.link === '#'">
-                <img :src="item.uri" class="banner" alt="">
+                <img :src="item.path" class="banner" alt="">
             </div>
             <div v-else>
                 <a :href="item.link" target="_blank">
-                    <img :src="item.uri" class="banner" alt="">
+                    <img :src="item.path" class="banner" alt="">
                 </a>
             </div>
 
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
-
     <div class="bg-grey">
       <div class="container">
         <div class="title">
@@ -264,16 +263,16 @@ export default {
           clickable: true
         },
       },
-      homeBannerList: [
-          {
-              uri: require('../../assets/img/home/lADPDgQ9qqwz793NAyDNB4A_1920_800.jpg'),
-              link: "https://mp.weixin.qq.com/s?__biz=MjM5MjAwNTUzMQ==&mid=2257487141&idx=5&sn=f0d9d0280caa550ee38efd0f68c85d92&chksm=a5d6c9d192a140c7abfb289df83ac150c1cc4270d5bd1e8f6ee666048d865b56b540e56b1dca&token=1136776401&lang=zh_CN#rd"
-          },
-          {
-              uri:"http://resource.alilo.com.cn/static/img/banner-1.bf09041.jpg",
-              link: "#"
-          }
-      ],
+      // homeBannerList: [
+      //     {
+      //         uri: require('../../assets/img/home/lADPDgQ9qqwz793NAyDNB4A_1920_800.jpg'),
+      //         link: "https://mp.weixin.qq.com/s?__biz=MjM5MjAwNTUzMQ==&mid=2257487141&idx=5&sn=f0d9d0280caa550ee38efd0f68c85d92&chksm=a5d6c9d192a140c7abfb289df83ac150c1cc4270d5bd1e8f6ee666048d865b56b540e56b1dca&token=1136776401&lang=zh_CN#rd"
+      //     },
+      //     {
+      //         uri:"http://resource.alilo.com.cn/static/img/banner-1.bf09041.jpg",
+      //         link: "#"
+      //     }
+      // ],
       homeBannerSwiper: {
         spaceBetween: 180,
         centeredSlides: true,
@@ -292,7 +291,8 @@ export default {
     ...mapGetters([
       'proList',
       'proDetailList',
-      'brandNewsList'
+      'brandNewsList',
+      'bannerData',
     ]),
   },
   watch: {
@@ -309,7 +309,7 @@ export default {
   },
   created() {
     this.$store.dispatch('getNewsList');
-
+    this.$store.dispatch('getBanner');
   },
   methods: {
     reqProData(index) {

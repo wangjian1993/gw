@@ -11,11 +11,13 @@ const state = {
       txt: '',
       link: ''
     }
-  ]
+  ],
+  bannerData: []
 }
 
 const getters = {
-  brandNewsList: state => state.brandNewsList
+  brandNewsList: state => state.brandNewsList,
+  bannerData: state => state.bannerData
 }
 
 const actions = {
@@ -50,6 +52,19 @@ const actions = {
     }
     rootState.requesting = false;
 
+  },
+  async getBanner({
+      commit
+    }) {
+      let param = {
+        position: 1,
+      }
+     try {
+        let res = await homeApi.getBanner(param);
+        commit(TYPE.BANNER_LIST, res.content.recommendList);
+     } catch (error) {
+       commit(TYPE.BANNER_LIST);
+     }
   }
 }
 
@@ -60,6 +75,9 @@ const mutations = {
   },
   [TYPE.NEWS_LIST_SUCCESS](state, response) {
     state.brandNewsList = response;
+  },
+  [TYPE.BANNER_LIST](state, response) {
+    state.bannerData = response;
   }
 }
 

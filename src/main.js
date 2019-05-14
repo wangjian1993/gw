@@ -19,7 +19,6 @@ VueAMap.initAMapApiLoader({
 Vue.use(Vuerify /*, add rules */)
 Vue.use(VueRouter)
 
-
 const router = new VueRouter({
 //   mode: 'history',// dev
   mode: 'hash',// pro

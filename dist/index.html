@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=renderer content=webkit><meta name=viewport content="width=device-width"><title>火火兔官网</title><meta name=description content=火火兔，大量免费提供原创,在线儿童动画片，儿童歌曲，儿童音乐，动画片下载，儿童文学，儿童故事，童话故事，有声读物，儿童游戏，儿童FLASH，儿童英语，大量儿童教育资源,免费下载！。><meta name=keywords content=火火兔,故事机,早教机,早教儿歌,胎教音乐,儿童歌曲,儿童故事><meta name=baidu-site-verification content=uuatZtvXcp><style>html,
+<!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=renderer content=webkit><meta name=viewport content="width=device-width"><title>火火兔官网</title><meta name=description content=火火兔，大量免费提供原创,在线儿童动画片，儿童歌曲，儿童音乐，动画片下载，儿童文学，儿童故事，童话故事，有声读物，儿童游戏，儿童FLASH，儿童英语，大量儿童教育资源,免费下载！。><meta name=keywords content=火火兔,故事机,早教机,早教儿歌,胎教音乐,儿童歌曲,儿童故事><meta name=baidu-site-verification content=uuatZtvXcp><link rel="shortcut icon" href=./static/img/index/logo.png type=image/x-icon><style>html,
     body,
     #app {
       height: 100%;
@@ -226,4 +226,29 @@
       font-size: 13px;
       color: #FFF;
       opacity: 0.5;
-    }</style><link href=./static/css/app.e28e299f3f8f1b5d2601743f76e799da.css rel=stylesheet></head><body><div id=app><div id=loader-wrapper><div id=loader></div><div class="loader-section section-left"></div><div class="loader-section section-right"></div><div class=load_title>火火兔正在加载中,请耐心等待</div></div></div><script type=text/javascript src=./static/js/manifest.7e5742f37f7ec1acb790.js></script><script type=text/javascript src=./static/js/vendor.6e3b1ded4a372e3ff098.js></script><script type=text/javascript src=./static/js/app.bdc501591bd76d9728fa.js></script></body></html>
+    }
+    #ieText{
+      display: none;
+      font-family: 'Open Sans';
+      color: #FFF;
+      font-size: 19px;
+      width: 100%;
+      text-align: center;
+      z-index: 9999999999999;
+      position: absolute;
+      top: 65%;
+      opacity: 1;
+      line-height: 30px;
+    }</style><link href=./static/css/app.35d89916de780fca368f4251fc1d5dba.css rel=stylesheet></head><body><div id=app><div id=loader-wrapper><div id=loader></div><div class="loader-section section-left"></div><div class="loader-section section-right"></div><div class=load_title id=homeText>火火兔正在加载中,请耐心等待</div><div id=ieText>系统检测到您正在使用ie8以下内核的浏览器，不能实现完美体验，请更换或升级浏览器访问！<br>(火火兔现已支持IE9+,Chrome,Safari,Opera,QQ浏览器,360浏览器)</div></div></div><script>var DEFAULT_VERSION = 8.0;
+    var ua = navigator.userAgent.toLowerCase();
+    var isIE = ua.indexOf("msie") > -1;
+    var safariVersion;
+    if (isIE) {
+      safariVersion = ua.match(/msie ([\d.]+)/)[1];
+    }
+    if (safariVersion <= DEFAULT_VERSION) {
+      // console.log('修改');
+      document.getElementById("ieText").style.display = "block";
+      // document.getElementById("homeText").rows[0].cells.innertext="hahah";
+      // alert("系统检测到您正在使用ie8以下内核的浏览器，不能实现完美体验，请更换或升级浏览器访问！(火火兔现已支持IE9+,Chrome,Safari,Opera,QQ浏览器,360浏览器")
+    };</script><script type=text/javascript src=./static/js/manifest.b0fd4d5a03d16f4596bc.js></script><script type=text/javascript src=./static/js/vendor.2cba9f10103821394cca.js></script><script type=text/javascript src=./static/js/app.fd8190d3eefbec651f73.js></script></body></html>
