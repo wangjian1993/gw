@@ -2,12 +2,19 @@
   <!--维修查询-->
   <div class="container" style="padding:50px 0;">
     <ol class="breadcrumb">
+<<<<<<< HEAD
       <li><router-link :to="{ name: 'service' }">服务</router-link></li>
+=======
+      <li>
+        <router-link :to="{name: 'service'}"> 服务</router-link>
+      </li>
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
       <li class="active">维修查询</li>
     </ol>
 
     <div class="content bg-white">
       <div class="row">
+<<<<<<< HEAD
         <div class="search-left"><input type="text" class="input-content" placeholder="请输入手机号/快递单号查询" v-model="inputTxt" /></div>
 
         <div class="search-right">
@@ -17,16 +24,37 @@
       </div>
 
       <div class="row tips-info" v-if="isError">{{ resultInfo }}</div>
+=======
+        <div class="search-left">
+          <input type="text" class="input-content" placeholder="请输入手机号/快递单号查询" v-model="inputTxt">
+        </div>
+
+        <div class="search-right">
+          <img src="../../assets/img/service/search-icon.png" alt="">
+          <button class="btn btn-search" @click="onSearch()">查询</button>
+        </div>
+
+      </div>
+
+      <div class="row tips-info" v-if="isError">{{resultInfo}}</div>
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
       <div class="row tips-info-blank" v-else></div>
 
       <div v-show="isResult">
         <div class="row result-info">
+<<<<<<< HEAD
           <div class="dividing-line"><span>查询结果</span></div>
+=======
+          <div class="dividing-line">
+            <span>查询结果</span>
+          </div>
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
         </div>
 
         <div class="row result-content" v-for="(item, index) in orderList" :key="index">
           <div class="result-left">
             <ul>
+<<<<<<< HEAD
               <li>快递公司：{{ item.inExpressName }}</li>
               <li>快递单号：{{ item.inExpressId }}</li>
               <li>回寄快递公司：{{ item.outExpressName }}</li>
@@ -44,11 +72,28 @@
                 </p>
                 <span>意见以及建议:</span>
                 <p>{{ item.commentList.content }}</p>
+=======
+              <li>
+                快递公司：{{item.inExpressName}}
+              </li>
+              <li>
+                快递单号：{{item.inExpressId}}
+              </li>
+              <li>
+                回寄快递公司：{{item.outExpressName}}
+              </li>
+              <li>
+                回寄单号：{{item.outExpressId}}
+              </li>
+              <li>
+                系统反馈：{{item.msgDetail}}
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
               </li>
             </ul>
           </div>
 
           <div class="result-right">
+<<<<<<< HEAD
             <div class="box-card" :class="item.msgStyle">{{ item.msg }}</div>
             <div class="box-comment" @click="commentClick(item.id)" v-if="item.result == 2 && item.commentList == ''">评价</div>
           </div>
@@ -73,6 +118,19 @@
         <el-button type="primary" @click="comentSbumit()">确 定</el-button>
       </div>
     </el-dialog>
+=======
+            <div class="box-card" :class="item.msgStyle">
+              {{item.msg}}
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
   </div>
 </template>
 
@@ -88,6 +146,7 @@ export default {
       isError: false,
       resultInfo: '',
       isResult: false,
+<<<<<<< HEAD
       orderID: -1,
       dialogFormVisible: false,
       textarea: '',
@@ -180,6 +239,43 @@ export default {
           console.log(error);
         });
     },
+=======
+      orderList: [
+        {
+          inExpressName: '',   // 快递公司
+          inExpressId: -1,     // 快递单号
+          outExpressName: '',  // 回寄快递公司
+          outExpressId: -1,    // 回寄快递单号
+          msg: '',             // 信息
+          msgDetail: '',       // 详情信息
+          msgStyle: ''         // 信息样式
+        }
+      ],
+      expressObj: {
+        2: "顺丰",
+        3: "申通",
+        4: "圆通",
+        5: "中通",
+        6: "韵达",
+        7: "百世汇通",
+        8: "宅急送",
+        9: "EMS",
+        10: "天天",
+        11: "全峰",
+        12: "速尔",
+        13: "优速",
+        14: "德邦",
+        15: "国通",
+        16: "万象",
+        17: "邮政",
+        18: "快捷",
+        19: "其它"
+      }
+    }
+  },
+
+  methods: {
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
     onSearch() {
       let reg = /^[A-Za-z0-9]+$/;
       let value = this.inputTxt;
@@ -194,6 +290,7 @@ export default {
       let param = {
         params: {
           number: value || null,
+<<<<<<< HEAD
           platform: 'web'
         }
       };
@@ -307,6 +404,108 @@ export default {
       this.orderID = id;
       this.dialogFormVisible = !this.dialogFormVisible;
     },
+=======
+          platform: "web"
+        }
+      };
+      maintainApi.getList(param).then((res) => {
+        let len = res.content.orderList.length;
+        let arr = res.content.orderList;
+
+        this.clearList();
+        if (len == 0) {
+          this.resultInfo = '所查号码无记录,请确认输入是否正确。';
+          this.isError = true;
+        } else {
+          for (let i = 0; i < len; ++i) {
+            let onName = '';
+            let onId = arr[i].expressNumber;
+            let offName = '';
+            let offId = arr[i].sendOffNumber;
+            let result = arr[i].result || -1;
+            let msg;
+            let msgDetail = '';
+            let msgStyle;
+
+            let cnt;
+            switch (result) {
+              case 0:
+                msg = '待收件';
+                msgDetail = '您查询的快递单号，售后点暂时没有收到。可能在寄往的路上，请耐心等待~';
+                msgStyle = 'border-color-blue';
+
+                cnt = 0;
+                for (let key in this.expressObj) {
+                  if (key == arr[i].sendOnExpress) {
+                    onName = this.expressObj[key];
+                    cnt++;
+                  }
+                  if (key == arr[i].sendOffExpress) {
+                    offName = this.expressObj[key];
+                    cnt++;
+                  }
+                  if (cnt >= 2) { break; }
+                }
+                break;
+              case 1:
+                msg = '待维修';
+                msgDetail = arr[i].dealinfo || '已收到您寄来的快递，正在安排检查故障，请耐心等待~';
+                msgStyle = 'border-color-red';
+
+                cnt = 0;
+                for (let key in this.expressObj) {
+                  if (key == arr[i].sendOnExpress) {
+                    onName = this.expressObj[key];
+                    cnt++;
+                  }
+                  if (key == arr[i].sendOffExpress) {
+                    offName = this.expressObj[key];
+                    cnt++;
+                  }
+                  if (cnt >= 2) { break; }
+                }
+                break;
+              case 2:
+                msg = '已寄出';
+                msgDetail = arr[i].dealinfo;
+                msgStyle = 'border-color-yellow';
+
+                for (let key in this.expressObj) {
+                  if (key == arr[i].sendOffExpress) {
+                    onName = offName = this.expressObj[key];
+                    break;
+                  }
+                }
+                break;
+              default:
+                msg = '待收件';
+                msgDetail = '您查询的快递单号，售后点暂时没有收到。可能在寄往的路上，请耐心等待~';
+                msgStyle = 'border-color-blue';
+                break;
+            }
+
+            this.orderList.push({
+              inExpressName: onName,   // 快递公司
+              inExpressId: onId,       // 快递单号
+              outExpressName: offName, // 回寄快递公司
+              outExpressId: offId,     // 回寄快递单号
+              msg: msg,                // 信息
+              msgDetail: msgDetail,    // 详情信息
+              msgStyle: msgStyle       // 信息样式
+            })
+          }
+
+          this.resultInfo = '';
+          this.isError = false;
+        }
+        this.showResultInfo();
+      }).catch((error) => {
+        console.log('--- failed');
+        console.log(error);
+      });
+    },
+
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
     clearList() {
       if (this.orderList.length > 0) {
         this.orderList = [];
@@ -317,7 +516,12 @@ export default {
       this.isResult = !this.isError && !(this.orderList.length == 0);
     }
   }
+<<<<<<< HEAD
 };
+=======
+
+}
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
 </script>
 
 <style scoped>
@@ -439,6 +643,7 @@ ul > li {
   color: #ffd600;
   border-color: #ffd600;
 }
+<<<<<<< HEAD
 .box-comment {
   text-align: center;
   font-size: 18px;
@@ -452,3 +657,8 @@ ul > li {
   cursor: pointer;
 }
 </style>
+=======
+</style>
+
+
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc

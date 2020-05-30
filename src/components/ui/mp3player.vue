@@ -1,9 +1,13 @@
 <template>
+<<<<<<< HEAD
   <div
     class="player"
     :class="[playerShow? playerShowCls : playerHideCls]"
     :style="posSty"
   >
+=======
+  <div class="player" :class="[playerShow? playerShowCls : playerHideCls]" :style="posSty">
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
     <audio
       id="music"
       v-if="audioPlayList.songList"
@@ -17,19 +21,27 @@
     <div class="player-display">
       <div class="up">
         <div class="left">
+<<<<<<< HEAD
           <img
             v-lazy="audioPlayList.cover"
             :key="audioPlayList.cover"
             alt
           >
+=======
+          <img v-lazy="audioPlayList.cover" :key="audioPlayList.cover" alt>
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
           <div class="hole"></div>
         </div>
 
         <div class="right">
+<<<<<<< HEAD
           <p
             class="title"
             v-if="audioPlayList.songList"
           >{{audioPlayList.songList[curSongId].txt}}</p>
+=======
+          <p class="title" v-if="audioPlayList.songList">{{audioPlayList.songList[curSongId].txt}}</p>
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
           <p class="detail">{{audioPlayList.name}}</p>
         </div>
       </div>
@@ -39,11 +51,15 @@
       <div class="down">
         <p class="left">{{currentTime}}</p>
         <div class="player-bar">
+<<<<<<< HEAD
           <img
             class="bg"
             src="../../assets/img/content/progress-bg.png"
             alt
           >
+=======
+          <img class="bg" src="../../assets/img/content/progress-bg.png" alt>
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
           <img
             class="point"
             :style="{left:indicatorPosition + '%'}"
@@ -62,6 +78,7 @@
         <div class="clear"></div>
       </div>
 
+<<<<<<< HEAD
       <a
         class="player-play"
         @click="onPlay()"
@@ -123,14 +140,39 @@
           src="../../assets/img/content/btn-list.png"
           alt
         >
+=======
+      <a class="player-play" @click="onPlay()">
+        <img v-if="isPlaying" src="../../assets/img/content/btn-pause.png" alt>
+        <img v-else src="../../assets/img/content/btn-play.png" alt>
+      </a>
+      <a class="player-pre" @click="onChangeSong('pre')">
+        <img src="../../assets/img/content/btn-pre.png" alt>
+      </a>
+      <a class="player-next" @click="onChangeSong('next')">
+        <img src="../../assets/img/content/btn-next.png" alt>
+      </a>
+
+      <a class="player-switch" @click="onSwitch()">
+        <img :src="btnLR.pointer" alt>
+      </a>
+      <a class="player-download" href="javascript:void(0)" @click="onDownload()">
+        <img src="../../assets/img/content/btn-download.png" alt>
+      </a>
+      <a class="player-pop" @click="onPop()">
+        <img src="../../assets/img/content/btn-list.png" alt>
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
       </a>
     </div>
 
     <transition name="pop-slide-fade">
+<<<<<<< HEAD
       <div
         class="player-list"
         v-if="isPop"
       >
+=======
+      <div class="player-list" v-if="isPop">
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
         <p class="title">
           <strong>专辑简介</strong>
         </p>
@@ -140,6 +182,7 @@
 
         <div class="sub">
           <div class="sel">
+<<<<<<< HEAD
             <a
               class="sel-img"
               @click="onAllSelect()"
@@ -154,6 +197,11 @@
                 src="../../assets/img/content/select-empty.png"
                 alt
               >
+=======
+            <a class="sel-img" @click="onAllSelect()">
+              <img v-if="isSelect.all" src="../../assets/img/content/select-check.png" alt>
+              <img v-else src="../../assets/img/content/select-empty.png" alt>
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
             </a>
           </div>
           <div class="title">
@@ -162,6 +210,7 @@
             </p>
           </div>
           <div class="download">
+<<<<<<< HEAD
               <a @click="xunleiDown()">
                 <div>
                   <img  class="download-png"
@@ -175,6 +224,11 @@
                   src="../../assets/img/content/batch-download.png"
                   alt
                 >
+=======
+            <a @click="onAllDownload()">
+              <div v-show="batchDownload.inProgress !== true">
+                <img class="download-png" src="../../assets/img/content/batch-download.png" alt>
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
               </div>
               <div
                 id="downloading-bg1"
@@ -187,12 +241,17 @@
                   :style="{width:(this.batchDownload.current / this.batchDownload.total * 100).toFixed() + '%'}"
                 ></div>
               </div>
+<<<<<<< HEAD
             </a> -->
+=======
+            </a>
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
           </div>
           <div class="num">
             <p>共{{audioPlayList.songNum}}首</p>
           </div>
         </div>
+<<<<<<< HEAD
         <!-- 下载选择框 -->
         <!-- <p @click="xunleiDown()">迅雷下载</p> -->
         <!-- <p>选择下载方式</p>
@@ -223,16 +282,28 @@
                   class="sel-img"
                   @click="onPieceSelect(index)"
                 >
+=======
+
+        <div class="song">
+          <div class="detailList" ref="detailList" @mousewheel="onMouseScroll()">
+            <ul class="left">
+              <li v-for="(item, index) in audioPlayList.songList" :key="index">
+                <a class="sel-img" @click="onPieceSelect(index)">
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
                   <img
                     v-if="isSelect.list[index]"
                     src="../../assets/img/content/select-check.png"
                     alt
                   >
+<<<<<<< HEAD
                   <img
                     v-else
                     src="../../assets/img/content/select-empty.png"
                     alt
                   >
+=======
+                  <img v-else src="../../assets/img/content/select-empty.png" alt>
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
                 </a>
               </li>
             </ul>
@@ -244,6 +315,7 @@
               >{{item.txt}}</li>
             </ul>
             <ul class="right">
+<<<<<<< HEAD
               <li
                 v-for="(item, index) in audioPlayList.songList"
                 :key="index"
@@ -252,6 +324,10 @@
                   src="../../assets/img/content/listen-icon.png"
                   alt
                 >
+=======
+              <li v-for="(item, index) in audioPlayList.songList" :key="index">
+                <img src="../../assets/img/content/listen-icon.png" alt>
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
                 {{item.playCnt}}
               </li>
             </ul>
@@ -261,16 +337,26 @@
     </transition>
   </div>
 </template>
+<<<<<<< HEAD
 <script>
 import { mapGetters } from "vuex";
 import { checkBrower } from "../../utils";
 export default {
   props: ["posSty"],
+=======
+
+<script>
+import { mapGetters } from 'vuex'
+import { checkBrower } from '../../utils'
+export default {
+  props: ['posSty'],
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
   data() {
     return {
       downloadDetail: {
         inProgress: false,
         cnt: 0,
+<<<<<<< HEAD
         current: 0
       },
       isAudoPlay: false,
@@ -288,14 +374,38 @@ export default {
         pointer: require("../../assets/img/content/arrow-right.png"),
         left: require("../../assets/img/content/arrow-left.png"),
         right: require("../../assets/img/content/arrow-right.png")
+=======
+        current: 0,
+      },
+      isAudoPlay: false,
+      isSelect: {
+        all: false,// 是否全选
+        list: [],// 打勾以及未打勾
+        checkLen: 0,// 打勾的数量
+      },
+      // UI
+      playerShowCls: 'player-transform-show',
+      playerHideCls: 'player-transform-hide',
+      isPop: false,
+      playerShow: false,
+      btnLR: {
+        pointer: require('../../assets/img/content/arrow-right.png'),
+        left: require('../../assets/img/content/arrow-left.png'),
+        right: require('../../assets/img/content/arrow-right.png')
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
       },
       // 滚动
       maxRow: 10,
       curVideoId: 0,
       distance: 55,
       listLen: 0,
+<<<<<<< HEAD
       scrollY: 0
     };
+=======
+      scrollY: 0,
+    }
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
   },
   watch: {
     isPlaying(val) {
@@ -309,13 +419,20 @@ export default {
         }
 
         if (val) {
+<<<<<<< HEAD
           document.getElementById("music").play();
         } else {
           document.getElementById("music").pause();
+=======
+          document.getElementById('music').play();
+        } else {
+          document.getElementById('music').pause();
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
         }
       } catch (error) {
         // 屏蔽可能的错误
       }
+<<<<<<< HEAD
     },
     audioPlayList(val) {
       this.listLen = val.songList.length;
@@ -327,6 +444,13 @@ export default {
           ? this.listLen - this.maxRow
           : this.curVideoId)
       );
+=======
+
+    },
+    audioPlayList(val) {
+      this.listLen = val.songList.length;
+      this.scrollY = -(this.distance * (this.curVideoId < this.maxRow ? 0 : this.listLen - this.curVideoId < this.maxRow ? this.listLen - this.maxRow : this.curVideoId));
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
       // set false
       this.setSelect(false);
     }
@@ -334,6 +458,7 @@ export default {
   computed: {
     ...mapGetters([
       // audio player
+<<<<<<< HEAD
       "audioPlayList",
       "isPlaying",
       "currentTime",
@@ -341,18 +466,32 @@ export default {
       "indicatorPosition",
       "curSongId",
       "batchDownload"
+=======
+      'audioPlayList',
+      'isPlaying',
+      'currentTime',
+      'leftTime',
+      'indicatorPosition',
+      'curSongId',
+      'batchDownload',
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
     ]),
     mp3Url() {
       return this.audioPlayList.songList[this.curSongId].uri;
     },
     scrollData() {
+<<<<<<< HEAD
       return this.scrollY + "px";
+=======
+      return this.scrollY + 'px';
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
     }
   },
   created() {
     this.pause();
 
     // audio album
+<<<<<<< HEAD
     this.$store.dispatch("getAudioAlbumList");
   },
   updated() {
@@ -363,6 +502,15 @@ export default {
       ).toFixed();
       this.setDownloadProgress(val);
     }
+=======
+    this.$store.dispatch('getAudioAlbumList');
+  },
+  updated(){
+      if(this.batchDownload.inProgress) {
+          let val = (this.batchDownload.current / this.batchDownload.total * 100).toFixed();
+          this.setDownloadProgress(val);
+      }
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
   },
   destroyed() {
     this.stop();
@@ -371,6 +519,7 @@ export default {
     // true/false
     setSelect(bl) {
       this.isSelect.all = bl;
+<<<<<<< HEAD
       for (let i = 0; i < this.listLen; ++i) {
         this.isSelect.list[i] = bl;
       }
@@ -386,21 +535,47 @@ export default {
       let cnt = 0;
       for (let i = 0; i < this.listLen; ++i) {
         if (this.isSelect.list[i] === false) {
+=======
+      for(let i = 0; i < this.listLen; ++i) {
+        this.isSelect.list[i] = bl;
+      }
+      this.isSelect.checkLen = bl === true? this.listLen : 0;
+    },
+    onAllSelect() {
+      this.isSelect.all === true? this.setSelect(false) : this.setSelect(true);
+    },
+    onPieceSelect(idx) {
+      let result = this.isSelect.list[idx] === true? false : true;
+      this.$set(this.isSelect.list, idx, result);
+
+      let cnt = 0;
+      for(let i = 0; i < this.listLen; ++i) {
+        if(this.isSelect.list[i] === false) {
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
           cnt++;
         }
       }
       this.isSelect.checkLen = this.listLen - cnt;
+<<<<<<< HEAD
       if (cnt === this.listLen) {
+=======
+      if(cnt === this.listLen) {
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
         this.isSelect.all = false;
       }
     },
     onAllDownload() {
+<<<<<<< HEAD
       if (this.batchDownload.inProgress) {
         console.log("my")
+=======
+      if(this.batchDownload.inProgress) {
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
         return;
       }
 
       let allList = [];
+<<<<<<< HEAD
       for (let i = 0; i < this.listLen; ++i) {
         if (this.isSelect.list[i] === true) {
           let _name = this.audioPlayList.songList[i].txt;
@@ -408,11 +583,21 @@ export default {
           let _arr = _url.split("/");
           let _fileName = _arr[_arr.length - 1];
           //   allList.push({ songName: _name, encodeName: _fileName, onProgressCallback: this.progressCallback.bind(this) });
+=======
+      for(let i = 0; i < this.listLen; ++i) {
+        if(this.isSelect.list[i] === true) {
+          let _name = this.audioPlayList.songList[i].txt;
+          let _url = this.audioPlayList.songList[i].uri;
+          let _arr = _url.split('/');
+          let _fileName = _arr[_arr.length - 1];
+        //   allList.push({ songName: _name, encodeName: _fileName, onProgressCallback: this.progressCallback.bind(this) });
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
           allList.push({ songName: _name, encodeName: _fileName });
         }
       }
 
       let allLen = allList.length;
+<<<<<<< HEAD
       if (allLen === 0) {
          this.$message({
           message: '请选择要下载的歌曲!!',
@@ -450,6 +635,14 @@ export default {
 					threadCount: 5, // 指定原始地址线程数【10.1.3及后续版本支持此功能。一般不必填写，但某些下载地址的服务器会限制单个IP的最大同时连接数，例如部分“网盘、在线视频”网站等，此时可将此项数值设为1，从而避免被服务器断开连接】
 					tasks: musicList
         });
+=======
+      if(allLen === 0) {
+        return;
+      }
+
+    //   this.startDownload();
+      this.$store.dispatch('audioAllDownload', allList);
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
     },
     startDownload() {
       this.downloadDetail.current = 0;
@@ -458,6 +651,7 @@ export default {
     },
     progressCallback(e) {
       let percentCompleted = Math.round((e.loaded * 100) / e.total);
+<<<<<<< HEAD
       percentCompleted === 100
         ? (this.downloadDetail.cnt += 1)
         : (this.downloadDetail.cnt += 0);
@@ -482,6 +676,27 @@ export default {
       bg1.setAttribute("data-beforeDown", str);
       let bg2 = document.getElementById("downloading-bg2");
       bg2.setAttribute("data-beforeDown", str);
+=======
+      percentCompleted === 100? this.downloadDetail.cnt+=1: this.downloadDetail.cnt+=0;
+      this.downloadDetail.current = (this.downloadDetail.cnt / this.isSelect.checkLen * 100).toFixed();
+
+      this.setDownloadProgress(this.downloadDetail.current);
+
+      if(this.downloadDetail.cnt === this.isSelect.checkLen) {
+        this.downloadDetail.cnt = 0;
+        this.downloadDetail.current = 0;
+        this.downloadDetail.inProgress = false;
+        console.log('--- over ---');
+      }
+    },
+    setDownloadProgress(val) {
+      let str = val + '%';
+
+      let bg1 = document.getElementById('downloading-bg1');
+      bg1.setAttribute('data-beforeDown', str);
+      let bg2 = document.getElementById('downloading-bg2');
+      bg2.setAttribute('data-beforeDown', str);
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
     },
     onSwitch() {
       this.playerShow = !this.playerShow;
@@ -493,6 +708,7 @@ export default {
     onDownload() {
       let _url = this.mp3Url;
       let _name = this.audioPlayList.songList[this.curSongId].txt;
+<<<<<<< HEAD
       let _arr = _url.split("/");
       let _fileName = _arr[_arr.length - 1];
 
@@ -515,25 +731,54 @@ export default {
           });
           break;
       }
+=======
+      let _arr = _url.split('/');
+      let _fileName = _arr[_arr.length - 1];
+
+    //   this.$store.dispatch('audioDownload', { songName: _name, encodeName: _fileName });
+    //   window.open(_url + '?appKey=A01A6B3988EAC607&type=gw_audio');
+        let webInfo = checkBrower();
+        switch(webInfo){
+            case"Safari":
+            case"IE":
+                window.open(_url + '?appKey=A01A6B3988EAC607&type=gw_audio');
+                break;
+            case"Chrome":
+            case"Opera":
+            case"FF":
+                this.$store.dispatch('audioDownload', { songName: _name, encodeName: _fileName });
+                break;
+        }
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
     },
     onPop() {
       this.isPop = !this.isPop;
     },
     onUpdateTime() {
       try {
+<<<<<<< HEAD
         let _curTime = parseInt(document.getElementById("music").currentTime);
         let _duraTime = parseInt(document.getElementById("music").duration);
         this.$store.dispatch("updateTime", {
           currentTime: _curTime,
           duration: _duraTime
         });
+=======
+        let _curTime = parseInt(document.getElementById('music').currentTime);
+        let _duraTime = parseInt(document.getElementById('music').duration);
+        this.$store.dispatch('updateTime', { currentTime: _curTime, duration: _duraTime });
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
       } catch (error) {
         // 屏蔽可能的错误
       }
     },
     onEnd() {
       if (this.audioPlayList.songList.length > 1) {
+<<<<<<< HEAD
         this.onChangeSong("next");
+=======
+        this.onChangeSong('next');
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
       } else {
         this.stop();
       }
@@ -543,11 +788,16 @@ export default {
       this.isPlaying ? this.pause() : this.play();
     },
     async onChangeSong(select, num = this.audioPlayList.songNum) {
+<<<<<<< HEAD
       await this.$store.dispatch("changeSong", { model: select, songNum: num });
+=======
+      await this.$store.dispatch('changeSong', { model: select, songNum: num });
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
       this.play();
     },
     stop() {
       this.pause();
+<<<<<<< HEAD
       this.$store.dispatch("updateTime", { currentTime: 0, duration: 0 });
     },
     pause() {
@@ -555,13 +805,26 @@ export default {
     },
     play() {
       this.$store.dispatch("setIsPlaying", true);
+=======
+      this.$store.dispatch('updateTime', { currentTime: 0, duration: 0 });
+    },
+    pause() {
+      this.$store.dispatch('setIsPlaying', false);
+    },
+    play() {
+      this.$store.dispatch('setIsPlaying', true);
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
     },
     onMouseScroll() {
       if (this.listLen > this.maxRow) {
         event.preventDefault();
+<<<<<<< HEAD
         let _delta =
           (event.wheelDelta && (event.wheelDelta > 0 ? 1 : -1)) ||
           (event.detail && (event.detail > 0 ? -1 : 1));
+=======
+        let _delta = (event.wheelDelta && (event.wheelDelta > 0 ? 1 : -1)) || (event.detail && (event.detail > 0 ? -1 : 1));
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
 
         if (_delta > 0) {
           if (this.scrollY === 0) {
@@ -576,10 +839,18 @@ export default {
           this.scrollY -= this.distance;
         }
         this.$refs.detailList.style.top = this.scrollData;
+<<<<<<< HEAD
       }
     }
   }
 };
+=======
+
+      }
+    }
+  }
+}
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
 </script>
 
 <style scoped>
@@ -789,7 +1060,11 @@ export default {
 .player-list > .sub > .title {
   font-size: 18px;
   color: #404040;
+<<<<<<< HEAD
   width: 55%;
+=======
+  width: 60%;
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
   float: left;
   padding: 7px 0;
   overflow: hidden;
@@ -849,8 +1124,13 @@ export default {
 }
 .download-png {
   position: relative;
+<<<<<<< HEAD
   width: 100%;
   height: 100%;
+=======
+  width: 114px;
+  height: 34px;
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
 }
 .player-list > .sub > .num {
   font-size: 18px;

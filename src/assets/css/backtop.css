@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
   font-family: "vm-backtop-font";
   src: url('../fonts/vm-font.eot'); /* IE9*/
@@ -37,4 +38,45 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+=======
+@font-face {
+  font-family: "vm-backtop-font";
+  src: url('../fonts/vm-font.eot'); /* IE9*/
+  src: url('../fonts/vm-font.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/vm-font.woff') format('woff'), /* chrome, firefox */
+  url('../fonts/vm-font.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/vm-font.svg?#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.back-top-box {
+  position: fixed;
+  z-index: 10;
+  cursor: pointer;
+  display: none;
+}
+.back-top-box-show {
+  display: block;
+}
+.back-top-box-inner {
+  background: #dbdbdb;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+.back-top-box-inner:hover {
+  background: #b4b4b4;
+}
+.back-top-box i {
+  color: #fff;
+  font-size: 24px;
+  padding: 19px 18px;
+}
+.icon-een {
+  display: inline-block;
+  font-family:"vm-backtop-font" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
 .icon-een:before { content: "\e607"; }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "presets": [
     ["env", {
@@ -15,3 +16,17 @@
     }]]
   ]
 }
+=======
+{
+  "presets": [
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+      }
+    }],
+    "stage-2"
+  ],
+  "plugins": ["transform-vue-jsx", "transform-runtime"]
+}
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc

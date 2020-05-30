@@ -18,7 +18,10 @@
     "vue": "^2.5.2",
     "vue-amap": "^0.5.4",
     "vue-awesome-swiper": "^3.1.3",
+<<<<<<< HEAD
     "vue-clipboard2": "^0.3.1",
+=======
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
     "vue-router": "^3.0.1",
     "vuerify": "^0.4.0",
     "vuex": "^2.0.0"
@@ -28,7 +31,10 @@
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.1",
+<<<<<<< HEAD
     "babel-plugin-component": "^1.1.1",
+=======
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-plugin-transform-vue-jsx": "^3.5.0",

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
   font-family: "SourceHanSans-Normal";
   src: url('../fonts/SourceHanSans-Normal.eot'); /* IE9*/
@@ -5,4 +6,13 @@
   url('../fonts/SourceHanSans-Normal.woff') format('woff'), /* chrome, firefox */
   url('../fonts/SourceHanSans-Normal.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
   url('../fonts/SourceHanSans-Normal.svg') format('svg'); /* iOS 4.1- */
+=======
+@font-face {
+  font-family: "SourceHanSans-Normal";
+  src: url('../fonts/SourceHanSans-Normal.eot'); /* IE9*/
+  src: url('../fonts/SourceHanSans-Normal.eot') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/SourceHanSans-Normal.woff') format('woff'), /* chrome, firefox */
+  url('../fonts/SourceHanSans-Normal.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/SourceHanSans-Normal.svg') format('svg'); /* iOS 4.1- */
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
 }

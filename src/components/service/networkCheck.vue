@@ -13,12 +13,21 @@
     </div>
 
     <div class="content bg-white">
+<<<<<<< HEAD
      <!-- <div class="row font-default" style="padding-top:20px;padding-bottom:20px; height:auto;text-align:center;color:#4e4e4e;background-color:#f6f6f6;border:1px solid #f5edf0;">
         预留电话：0755-86950838，售后服务400热线：4000-585-959，地址：深圳市宝安区松岗燕罗街道塘下涌工业大道158号恒毅模具工业园区A栋105博悦公司
       </div> -->
 
       <div class="row" style="text-align:center;margin: 30px auto 30px auto;width: 100%;">
         <img src="../../assets/img/service/from.png" alt="" style="width: 70%;margin: 0 auto;">
+=======
+      <div class="row font-default" style="padding-top:20px;padding-bottom:20px; height:auto;text-align:center;color:#4e4e4e;background-color:#f6f6f6;border:1px solid #f5edf0;">
+        预留电话：0769-82929490，售后服务400热线：4000-585-959，地址：东莞市沙田镇港口大道超达工业园A栋一楼。收件人：博悦售后服务部
+      </div>
+
+      <div class="row" style="text-align:center;margin: 30px auto 30px auto;">
+        <img src="../../assets/img/service/form.png" alt="">
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
       </div>
 
       <div class="row" style="text-align:center;">
@@ -44,3 +53,8 @@ export default {
   padding-bottom: 50px;
 }
 </style>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc

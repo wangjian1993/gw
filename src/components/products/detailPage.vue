@@ -15,11 +15,16 @@
 
     <div class="content">
       <img v-for="(item, index) in proDetailList" :key="index" v-lazy="item.uri" alt="">
+<<<<<<< HEAD
       <!-- <el-image v-for="(item, index) in proDetailList" :key="index" :src="item.uri" lazy></el-image> -->
        <!-- <div class="demo-image__lazy">
         <el-image v-for="url in urls" :key="url" :src="url" lazy></el-image>
       </div> -->
     </div>
+=======
+    </div>
+
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
   </div>
 </template>
 
@@ -30,6 +35,7 @@ export default {
   data() {
     return {
       name: '',
+<<<<<<< HEAD
       type: '',
        urls: [
           'https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg',
@@ -40,6 +46,9 @@ export default {
           'https://fuss10.elemecdn.com/3/28/bbf893f792f03a54408b3b7a7ebf0jpeg.jpeg',
           'https://fuss10.elemecdn.com/2/11/6535bcfb26e4c79b48ddde44f4b6fjpeg.jpeg'
         ]
+=======
+      type: ''
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
     }
   },
   computed: {

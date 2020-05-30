@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 /node_modules/
 npm-debug.log
@@ -7,4 +8,15 @@ package-lock.json
 # 忽略使用VSCode开发时，生成的缓存文件夹
 .vscode
 tree.md
+=======
+.DS_Store
+/node_modules/
+npm-debug.log
+package-lock.json
+# 忽略使用WebStorm开发时，生成的缓存文件夹
+.idea
+# 忽略使用VSCode开发时，生成的缓存文件夹
+.vscode
+tree.md
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
 *.idea

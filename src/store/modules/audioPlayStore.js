@@ -66,6 +66,7 @@ const actions = {
         }
 
         try {
+<<<<<<< HEAD
            let res = await contentApi.getAudioResource(data);
            var blob = new Blob([res]);
           if('msSaveOrOpenBlob' in navigator){
@@ -85,6 +86,15 @@ const actions = {
             // aTag.href = URL.createObjectURL(blob);
             // aTag.click();
             // URL.revokeObjectURL(blob);
+=======
+            let res = await contentApi.getAudioResource(data);
+            let aTag = document.createElement('a');
+            let blob = new Blob([res]);
+            aTag.download = data.songName + '.mp3';
+            aTag.href = URL.createObjectURL(blob);
+            aTag.click();
+            URL.revokeObjectURL(blob);
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
 
         } catch (error) {
             console.log(error);
@@ -174,4 +184,8 @@ export default {
     getters,
     actions,
     mutations
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc

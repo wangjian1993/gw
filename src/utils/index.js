@@ -27,11 +27,18 @@ export function checkBrower() {
     if (userAgent.indexOf("Safari") > -1) {
         return "Safari";
     } //判断是否Safari浏览器
+<<<<<<< HEAD
     if (userAgent.indexOf("Edge") > -1) {
       return "Edge";
     } //
+=======
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
     if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
         return "IE";
     } //判断是否IE浏览器
     return "IE";
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
