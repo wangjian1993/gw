@@ -8,9 +8,9 @@
       <li>
         <router-link :to="{name: 'selfHelp'}"> 自助查询</router-link>
       </li>
-      <li>
+     <!-- <li>
         <router-link :to="{name: 'saleTerm'}"> 售后条款</router-link>
-      </li>
+      </li> -->
       <li class="active">寄件维修</li>
     </ol>
 
@@ -44,7 +44,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row"> -->
 
          <!-- <div class="col-md-1">
             <p class="detail-title">购买渠道</p>
@@ -58,15 +58,15 @@
             </select>
           </div> -->
 
-          <div class="col-md-1">
+         <!-- <div class="col-md-1">
             <p class="detail-title">订单号</p>
           </div>
 
           <div class="col-md-2">
             <input type="text" class="detail-info" placeholder="请输入购买订单号" v-model="orderId">
-          </div>
+          </div> -->
 
-        </div>
+        <!-- </div> -->
 
         <div class="row">
 

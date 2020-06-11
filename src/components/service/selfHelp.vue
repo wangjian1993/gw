@@ -32,7 +32,7 @@
       <div class="row">
         <p style="text-align:center;color:#404040;">
           依旧没有解决我的问题，
-          <router-link :to="{ name: 'saleTerm' }" style="color:#e60012;cursor:pointer;text-decoration:underline;">我要报修</router-link>
+          <router-link :to="{ name: 'sendTerm' }" style="color:#e60012;cursor:pointer;text-decoration:underline;">我要报修</router-link>
         </p>
       </div>
     </div>

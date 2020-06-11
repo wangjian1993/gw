@@ -5,17 +5,17 @@
       <li>
         <router-link :to="{name: 'service'}"> 服务</router-link>
       </li>
-      <li>
+     <!-- <li>
         <router-link :to="{name: 'selfHelp'}"> 自助查询</router-link>
-      </li>
-      <li class="active">售后条款</li>
+      </li> -->
+      <li class="active">售后政策</li>
     </ol>
 
     <div class="content bg-white">
       <div class="list">
-        <p class="title">售后服务政策</p>
-        <p class="sub-title">在报修之前，请先了解我们的售后条款，方便我们更便捷的为您服务</p>
-        <img class="saleimg" src="../../assets/img/service/self.png" alt="">
+        <!-- <p class="title">售后服务政策</p> -->
+        <!-- <p class="sub-title">在报修之前，请先了解我们的售后条款，方便我们更便捷的为您服务</p> -->
+        <img class="saleimg" src="../../assets/img/service/self.jpg" alt="">
         <!-- <ul>
           <li class="indent">
             一、深圳博悦生活用品有限公司承诺严格执行国家相关“三包”法规定，对中国大陆地区销售的任一产品进行三包服务。
@@ -36,7 +36,7 @@
             六、如有下列情形，需酌收材料成本及维修工时直接不予维修，由售后报价给客户或通知客户报废。<br/>※超过保修期或不在保修范围的严重损坏（主板、电池、TF卡等同时多部件损坏）<br/>※擅自拆焊零部件或修改而导致不良情形※零件之自然损耗及遇不可抗拒之天灾<br/>※非经授权渠道购得此产品者或仿制品，非本公司产品
           </li> -->
 
-          <div class="diliver-box">
+          <!-- <div class="diliver-box">
             送修方式
           </div>
 
@@ -51,22 +51,22 @@
           </li>
           <li>
             寄修注意事项：客户承担寄回维修快递费,在寄回的包装中内附说明,需要包括以下信息:回寄人姓名,地址,电话,机器故障及服务需求等。
-          </li>
+          </li> -->
         </ul>
       </div>
 
-      <div class="check-box">
+      <!-- <div class="check-box">
         <img class="check-box-rect" src="../../assets/img/service/border_red.png" @click="onCheck()">
         <img class="check-box-hook" src="../../assets/img/service/gou.png" v-show="isCheck">
         <span v-if="isCheck">{{this.spanTxt}}</span>
         <span v-else>{{this.spanTxt}}</span>
-      </div>
+      </div> -->
 
      <!-- <div class="title-info">
         根据您的反馈，我们为您提供了两种最优的解决办法
       </div> -->
 
-      <div class="row" style="margin: 0 auto;text-align: center;">
+      <!-- <div class="row" style="margin: 0 auto;text-align: center;">
         <div class="service-icon" v-bind:class="{'bg-blue': isCheck, 'btn-limited': !isCheck}">
           <a @click.prevent="onJump('sendTerm')">
             <p style="font-size:22px;">寄件维修</p>
@@ -74,14 +74,14 @@
           </a>
         </div>
 
-        <!-- <div class="service-icon" v-bind:class="{'bg-green': isCheck, 'btn-limited': !isCheck}">
+        <div class="service-icon" v-bind:class="{'bg-green': isCheck, 'btn-limited': !isCheck}">
           <a @click.prevent="onJump('checkTerm')">
             <p style="font-size:22px;">送检维修</p>
             <p style="font-size:14px;">送到附近售后店维修(不支持寄修)</p>
           </a>
-        </div> -->
+        </div>
 
-      </div>
+      </div> -->
 
     </div>
   </div>
