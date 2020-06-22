@@ -17,7 +17,7 @@
               <p>服务支持</p>
               <ul class="list-unstyled ">
                 <li><a href="http://www.alilo.com.cn/down/huohuotuPC_V1.32.exe" target="_blank">资源下载软件</a></li>
-                <li><router-link :to="{ name: 'networkCheck' }">全国售后网点</router-link></li>
+                <!-- <li><router-link :to="{ name: 'networkCheck' }">全国售后网点</router-link></li> -->
                 <li><router-link :to="{ name: 'service' }">在线服务</router-link></li>
                 <li><router-link :to="{ name: 'selfHelp' }">自助售后</router-link></li>
                 <li><router-link :to="{ name: 'dealerCheck' }">授权查询</router-link></li>

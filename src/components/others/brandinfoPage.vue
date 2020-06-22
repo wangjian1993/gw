@@ -29,7 +29,8 @@
 
             <div class="brand-right">
               <div class="inline-btn">
-                <a :href="item.link" target="_blank">了解详情 ></a>
+                <a v-if="item.id != 74" :href="item.link" target="_blank">了解详情 ></a>
+                <a v-else @click="statement()">了解详情 ></a>
               </div>
             </div>
           </div>
@@ -68,6 +69,9 @@ export default {
   methods: {
     onLoadMore() {
 
+    },
+    statement(){
+      this.$router.push({ name: 'statement' });
     }
   }
 }
@@ -172,4 +176,3 @@ a {
   text-align: center;
 }
 </style>
-

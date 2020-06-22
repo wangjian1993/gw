@@ -59,6 +59,7 @@ const CopyrightPage = () => import("@/components/others/copyrightPage.vue")
 const FeedbackPage = () => import("@/components/others/feedbackPage.vue")
 const BrandinfoPage = () => import("@/components/others/brandinfoPage.vue")
 const SearchPage = () => import("@/components/common/searchPage.vue")
+const statement = () => import("@/components/others/statement.vue")
 export default [{
     path: '/',
     redirect: '/pages'
@@ -198,7 +199,12 @@ export default [{
         name: 'searchpage',
         path: '/pages/others/search', // 搜索结果
         component: SearchPage
-      }
+      },
+      {
+        name: 'statement',
+        path: '/pages/others/statement', // 搜索结果
+        component: statement
+      },
     ]
   },
   { // 404页面：必须位于最后，否则其它的路由地址都会使用 NotFound 组件

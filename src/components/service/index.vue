@@ -44,7 +44,7 @@
         <p>联络信息</p>
       </div>
 
-      <div class="row">
+      <div class="row" style="padding-bottom:114px;">
         <div class="service-icon">
           <span>
             <img src="../../assets/img/service/icon5.png" alt="" />
@@ -166,16 +166,18 @@ export default {
   text-align: center;
   background: #fff;
   border: 1px dashed #f5edf0;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .service-icon img {
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .service-icon a,
 span {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  /* top: 50%;
+  transform: translateY(-50%); */
   width: 100%;
   color: #575757;
   /* display: inline-block; */
@@ -204,7 +206,6 @@ span {
 .service-icon p {
   font-size: 18px;
   margin-top: 40px;
-  line-height: 30px;
 }
 .commit-list {
   float: left;
