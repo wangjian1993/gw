@@ -76,7 +76,7 @@
             <div class="address-list">
               <div style="display:inline-block;height:29px;line-height:29px;">
                 <img style="float:left;" src="../../assets/img/icon-5.png" />
-                <span style="float:left;padding:0 0 0 10px;color:#989898;font-size:14px;">联系地址：深圳市南山区科技南十二路18号长虹科技大厦9楼07单元</span>
+                <span style="float:left;padding:0 0 0 10px;color:#989898;font-size:14px;">联系地址：深圳市南山区西丽街道西丽社区兴科一街万科云城一期七栋B座21层</span>
               </div>
             </div>
 
@@ -188,7 +188,7 @@ a:hover {
 .address-list {
   position: relative;
   float: left;
-  margin: 20px 41px 0;
+  margin: 20px 21px 0;
 }
 .address-list:first-child {
   margin-left: 10px;

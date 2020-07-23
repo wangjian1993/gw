@@ -98,7 +98,7 @@
 import Pagination from '../ui/pagination';
 import AudioPlayer from '../ui/mp3player';
 import { mapGetters } from 'vuex';
-import books from '../../assets/content.json';
+import books from '../../../static/content.json';
 
 export default {
   components: {
