@@ -20,14 +20,14 @@
           <p>企业荣誉</p>
           <p>Our honor</p>
         </a>
-        <a class="nav-opt" href="#content">
+        <!-- <a class="nav-opt" href="#content">
           <p>内容体系</p>
           <p>Content system</p>
         </a>
         <a class="nav-opt" href="#statement">
           <p>品牌信息声明</p>
           <p>Brand information statement</p>
-        </a>
+        </a> -->
       </div>
     </div>
 
@@ -113,10 +113,11 @@ export default {
   width: 1200px;
   height: 100px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
 }
 .nav-opt {
-  float: left;
-  width: 200px;
+  width: 25%;
   text-align: center;
   margin-top: 25px;
   display: block;
