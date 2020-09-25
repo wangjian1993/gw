@@ -227,7 +227,7 @@ export default {
       if (this.contentData.titleId === index) {
         return;
       }
-      console.log("点击====")
+      console.log("点击====1111")
       this.reqData(index, { titleId: index, tagId: 0, sortId: 0 }, { tagId: 0, sortId: 0 });
     },
     onTagChange(index) {
@@ -282,6 +282,7 @@ export default {
       if (reqId === 0) {
         this.$store.dispatch('getConAudioList', listData);
       } else {
+        console.log(listData)
         this.$store.dispatch('getConVideoList', listData);
       }
     }

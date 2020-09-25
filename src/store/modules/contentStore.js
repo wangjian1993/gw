@@ -19,12 +19,12 @@ const state = {
 	{ txt: '点读包', uri: require('../../assets/img/content/7diandubao.png') }
   ],
   conVideoTagList: [
-    { txt: '全部', id: 999 },
-    { txt: '亲子', id: 2 },
-    { txt: '童话', id: 3 },
-    { txt: '教育', id: 4 },
-    { txt: '励志', id: 5 },
-    { txt: '搞笑', id: 6 },
+    // { txt: '全部', id: 999 },
+    // { txt: '亲子', id: 2 },
+    // { txt: '童话', id: 3 },
+    // { txt: '教育', id: 4 },
+    // { txt: '励志', id: 5 },
+    // { txt: '搞笑', id: 6 },
     { txt: '官方原创', id: 1 }
   ],
   conSortList: ['最新', '最热'],
@@ -209,7 +209,8 @@ const actions = {
     rootState.requesting = true;
     commit(TYPE.CONTENT_RESOURCE_REQUEST);
     console.log(data)
-    let _genre = data.tagId === 0 ? '' : state.conVideoTagList[data.tagId].id;
+    // let _genre = data.tagId === 0 ? '' : state.conVideoTagList[data.tagId].id;
+    let _genre =1;
     let param = {
       genre: _genre,
       episodeCount: data.sortId
