@@ -108,7 +108,8 @@ const actions = {
         songNum: _list.length,
         name: _info.name,
         detail: _info.description,
-        cover: _info.coverpath
+        cover: _info.coverpath,
+		isbn:_info.isbn
       };
 
       commit(TYPE.AUDIO_ALBUM_SUCCESS, _result);

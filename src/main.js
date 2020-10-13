@@ -17,12 +17,16 @@ import {
   FormItem,
   Input,
   Button,
-  Rate
+  Rate,
+  MessageBox
 } from 'element-ui'
-Vue.prototype.$message = Message;
 Vue.use(Image)
 Vue.use(VueAMap)
-Vue.use(Dialog).use(Form).use(FormItem).use(Input).use(Button).use(Rate)
+Vue.use(Dialog).use(Form).use(FormItem).use(Input).use(Button).use(Rate);
+Vue.component(MessageBox.name, MessageBox);
+Vue.prototype.$message = Message;
+Vue.prototype.$msgbox = MessageBox;
+Vue.prototype.$alert = MessageBox.alert;
 VueAMap.initAMapApiLoader({
   key: 'b86d24b211e4d2513f280f8eb458c61f',
   plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType',
