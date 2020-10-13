@@ -11,7 +11,7 @@
         </el-amap-circle-marker>
       </el-amap>
 
-      <img class="map-img" src="../../assets/img/others/com-info.png">
+      <img class="map-img" src="../../assets/img/others/cam-info.png">
     </div>
 
     <div class="container" style="margin-top:50px;">
@@ -147,14 +147,14 @@ export default {
   data() {
     return {
       zoom: 18,
-      center: [113.956535, 22.538131],
+      center: [113.940018,22.574899],
 
       currentWindow: {
-        position: [113.957635, 22.538131],
-        content: '我在长虹大厦附近>'
+        position: [113.940018,22.574899],
+        content: '我在万科云城一期七栋B座'
       },
       circlePoint: {
-        center: [113.957635, 22.538131],
+        center: [113.940018,22.574899],
         radius: 10,
         fillOpacity: 1,
         strokeColor: 'rgba(255,255,255,1)',
@@ -162,7 +162,7 @@ export default {
 
       },
       circle: {
-        center: [113.957635, 22.538131],
+        center: [],
         radius: 25,
         strokeWeight: 1,
         fillOpacity: 0.5,

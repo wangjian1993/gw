@@ -21,14 +21,14 @@
           <p>企业荣誉</p>
           <p>Our honor</p>
         </a>
-        <a class="nav-opt" href="#content">
+       <a class="nav-opt" href="#content">
           <p>内容体系</p>
           <p>Content system</p>
         </a>
-        <a class="nav-opt" href="#statement">
+      <!--  <a class="nav-opt" href="#statement">
           <p>品牌信息声明</p>
           <p>Brand information statement</p>
-        </a>
+        </a> -->
       </div>
     </div>
 
@@ -57,8 +57,7 @@ export default {
         { uri: require('../../assets/img/brand/bg-2.png'), id: 'growth'},
         { uri: require('../../assets/img/brand/bg-3.png'), id: 'product'},
         { uri: require('../../assets/img/brand/bg-4.jpg'), id: 'honor'},
-        { uri: require('../../assets/img/brand/bg-5.jpg'), id: 'content'},
-        { uri: require('../../assets/img/brand/bg-6.jpg'), id: 'statement'}
+        { uri: require('../../assets/img/brand/bg-5.jpg'), id: 'content'}
       ],
       isFixed: false,
       ticking: false,
@@ -114,10 +113,11 @@ export default {
   width: 1200px;
   height: 100px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
 }
 .nav-opt {
-  float: left;
-  width: 200px;
+  width: 20%;
   text-align: center;
   margin-top: 25px;
   display: block;

@@ -8,9 +8,9 @@
       <li>
         <router-link :to="{name: 'selfHelp'}"> 自助查询</router-link>
       </li>
-      <li>
+     <!-- <li>
         <router-link :to="{name: 'saleTerm'}"> 售后条款</router-link>
-      </li>
+      </li> -->
       <li class="active">寄件维修</li>
     </ol>
 
@@ -24,7 +24,6 @@
         <div class="box-card-content">
           <ul>
             <li>
-<<<<<<< HEAD
               邮寄地址 : 深圳市宝安区松岗燕罗街道塘下涌工业大道158号恒毅模具工业园区A栋105博悦公司（无需寄回配件）
             </li>
             <li>
@@ -32,15 +31,6 @@
             </li>
             <li>
               联系电话 : 4000-585-959
-=======
-              邮寄地址 : 东莞市沙田镇港口大道超达工业园A栋一楼
-            </li>
-            <li>
-              收件人 : 火火兔售后部收
-            </li>
-            <li>
-              预留电话：0769-82929490，售后服务400热线：4000-585-959
->>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
             </li>
           </ul>
         </div>
@@ -54,13 +44,9 @@
           </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row"> -->
 
-<<<<<<< HEAD
          <!-- <div class="col-md-1">
-=======
-          <div class="col-md-1">
->>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
             <p class="detail-title">购买渠道</p>
           </div>
 
@@ -70,23 +56,17 @@
                 {{ option.txt }}
               </option>
             </select>
-<<<<<<< HEAD
           </div> -->
 
-          <div class="col-md-1">
-=======
-          </div>
-
-          <div class="col-md-1 col-md-offset-1">
->>>>>>> a827187f5e6d0753c62a8b21147968a59880e1cc
+         <!-- <div class="col-md-1">
             <p class="detail-title">订单号</p>
           </div>
 
           <div class="col-md-2">
             <input type="text" class="detail-info" placeholder="请输入购买订单号" v-model="orderId">
-          </div>
+          </div> -->
 
-        </div>
+        <!-- </div> -->
 
         <div class="row">
 

@@ -78,7 +78,7 @@
         </div>
       </div>
 
-      <div class="row album-info" v-if="contentIndexList.sleepyList.length > 0">
+     <!-- <div class="row album-info" v-if="contentIndexList.sleepyList.length > 0">
         <div class="row"><p class="album-title">哄睡专区</p></div>
 
         <div class="album-icon" v-for="(item, index) in contentIndexList.sleepyList" :key="index">
@@ -89,7 +89,7 @@
           <p class="album-sub-1">{{ item.title }}</p>
           <p class="album-sub-2">{{ item.detail }}</p>
         </div>
-      </div>
+      </div> -->
 
       <!-- <div class="row album-info" v-if="contentIndexList.brandList.length > 0">
         <div class="row">

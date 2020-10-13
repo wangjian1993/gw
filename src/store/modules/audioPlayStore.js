@@ -69,11 +69,13 @@ const actions = {
 <<<<<<< HEAD
            let res = await contentApi.getAudioResource(data);
            var blob = new Blob([res]);
+           console.log(blob)
           if('msSaveOrOpenBlob' in navigator){
             window.navigator.msSaveOrOpenBlob(blob, data.songName + '.mp3');
             return;
           }
           var eleLink = document.createElement('a');
+          console.log(data.songName)
           eleLink.download = data.songName + '.mp3';
           eleLink.href = URL.createObjectURL(blob);
           document.body.appendChild(eleLink);

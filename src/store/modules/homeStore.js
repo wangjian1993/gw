@@ -42,7 +42,8 @@ const actions = {
           title: _list[i].title,
           date: _formatDate(_list[i].createtime),
           txt: _list[i].description,
-          link: _list[i].link
+          link: _list[i].link,
+          id:_list[i].id
         });
       }
       commit(TYPE.NEWS_LIST_SUCCESS, _result);

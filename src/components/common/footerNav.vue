@@ -18,7 +18,7 @@
               <p>服务支持</p>
               <ul class="list-unstyled ">
                 <li><a href="http://www.alilo.com.cn/down/huohuotuPC_V1.32.exe" target="_blank">资源下载软件</a></li>
-                <li><router-link :to="{ name: 'networkCheck' }">全国售后网点</router-link></li>
+                <!-- <li><router-link :to="{ name: 'networkCheck' }">全国售后网点</router-link></li> -->
                 <li><router-link :to="{ name: 'service' }">在线服务</router-link></li>
                 <li><router-link :to="{ name: 'selfHelp' }">自助售后</router-link></li>
                 <li><router-link :to="{ name: 'dealerCheck' }">授权查询</router-link></li>
@@ -70,14 +70,14 @@
             <div class="address-list">
               <div style="display:inline-block;height:29px;line-height:29px;">
                 <img style="float:left;" src="../../assets/img/icon-4.png" />
-                <span style="float:left;padding:0 0 0 10px;color:#989898;font-size:14px;">公司名称：深圳市博悦生活用品有限公司</span>
+                <span style="float:left;padding:0 0 0 10px;color:#989898;font-size:14px;">公司名称：深圳市火火兔智慧科技有限公司</span>
               </div>
             </div>
 
             <div class="address-list">
               <div style="display:inline-block;height:29px;line-height:29px;">
                 <img style="float:left;" src="../../assets/img/icon-5.png" />
-                <span style="float:left;padding:0 0 0 10px;color:#989898;font-size:14px;">联系地址：深圳市南山区科技南十二路18号长虹科技大厦9楼07单元</span>
+                <span style="float:left;padding:0 0 0 10px;color:#989898;font-size:14px;">联系地址：深圳市南山区西丽街道西丽社区兴科一街万科云城一期七栋B座21层</span>
               </div>
             </div>
 
@@ -99,11 +99,11 @@
             <a target="_blank" href="http://szcert.ebs.org.cn/dfbdae64-a488-4984-aca1-22abe3dfdb79" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
               <img style="float:left;" src="http://szcert.ebs.org.cn/Images/govIcon.gif" width="26" height="36" />
             </a>
-            <a target="_blank" href="http://www.miitbeian.gov.cn/" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+            <a target="_blank" href="https://beian.miit.gov.cn" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
               <span style="float:left;color:#000;padding:0 0 0 20px;">
-                2010-2020深圳市博悦生活用品有限公司版权所有，并保留所有权利
+                2010-2020深圳市火火兔智慧科技有限公司版权所有，并保留所有权利
                 <br />
-                ICP备案证书号：粤ICP备14010229-1 公安机关备案号：44030502000626
+                ICP备案证书号：粤ICP备14010229号 公安机关备案号：44030502000650
               </span>
             </a>
           </div>
@@ -189,7 +189,7 @@ a:hover {
 .address-list {
   position: relative;
   float: left;
-  margin: 20px 41px 0;
+  margin: 20px 21px 0;
 }
 .address-list:first-child {
   margin-left: 10px;
